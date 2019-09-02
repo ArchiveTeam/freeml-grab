@@ -166,7 +166,7 @@ wget.callbacks.get_urls = function(file, url, is_css, iri)
       table.insert(urls, {url=match})
       addedtolist[match] = true
     end
-    if string.match(html, "Incapsula incident ID") or string.match(url, "Request unsuccessful.") then
+    if string.match(html, "Incapsula incident ID") or string.match(html, "Request unsuccessful.") then
       print("Incapsula blocked this pipeline'.")
       abortgrab = true
     end
